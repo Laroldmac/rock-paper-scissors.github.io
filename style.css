@@ -1,1 +1,9 @@
-
+*{
+    background-color: #333;
+    color: aliceblue;
+    font-stretch: expanded;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: bold;
+    text-align: center;
+}
