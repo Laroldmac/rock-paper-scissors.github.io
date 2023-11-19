@@ -13,12 +13,12 @@ function playGame(playerChoice) {
             var computerChoice = choices[Math.floor(Math.random() * 3)];
             var result = "";
 
-            if (playerChoice === computerChoice) {
+            if (playerChoices[i] === computerChoice) {
                 result = "It's a tie!";
             } else if (
-                (playerChoice === "rock" && computerChoice === "scissors") ||
-                (playerChoice === "paper" && computerChoice === "rock") ||
-                (playerChoice === "scissors" && computerChoice === "paper")
+                (playerChoices[i] === "rock" && computerChoice === "scissors") ||
+                (playerChoices[i] === "paper" && computerChoice === "rock") ||
+                (playerChoices[i] === "scissors" && computerChoice === "paper")
             ) {
                 result = "You win!";
             } else {
@@ -26,7 +26,7 @@ function playGame(playerChoice) {
             }
 
             // Store each round's result separately
-            results += "Round " + (i + 1) + ": You chose " + playerChoice + ". The computer chose " + computerChoice + ". " + result + "<br>";
+            results += "Round " + (i + 1) + ": You chose " + playerChoices[i] + ". The computer chose " + computerChoice + ". " + result + "<br>";
         }
 
         // Display all three rounds' results only after three rounds
