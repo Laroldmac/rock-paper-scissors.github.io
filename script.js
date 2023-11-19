@@ -26,10 +26,11 @@ function playGame(playerChoice) {
         results += "Round " + (i + 1) + ": You chose " + playerChoice + ". The computer chose " + computerChoice + ". " + result + "<br>";
     }
 
-    document.getElementById("result").innerHTML = results; // Display all three rounds' results
-    
-    // Disable buttons after three rounds
+    // Display all three rounds' results only after three rounds
     if (roundsPlayed >= 3) {
+        document.getElementById("result").innerHTML = results;
+
+        // Disable buttons after three rounds
         document.getElementById("rockBtn").disabled = true;
         document.getElementById("paperBtn").disabled = true;
         document.getElementById("scissorsBtn").disabled = true;
