@@ -1,9 +1,10 @@
 function playGame(playerChoice) {
     var choices = ["rock", "paper", "scissors"];
-    var result = "";
+    var results = ""; // Accumulate results for all rounds
 
     for (var i = 0; i < 3; i++) {
         var computerChoice = choices[Math.floor(Math.random() * 3)];
+        var result = "";
 
         if (playerChoice === computerChoice) {
             result = "It's a tie!";
@@ -16,6 +17,9 @@ function playGame(playerChoice) {
         } else {
             result = "You lose!";
         }
-    document.getElementById("result").innerHTML = "You chose " + playerChoice + ". The computer chose " + computerChoice + ". " + result;
-}
+
+        results += "Round " + (i + 1) + ": You chose " + playerChoice + ". The computer chose " + computerChoice + ". " + result + "<br>";
+    }
+
+    document.getElementById("result").innerHTML = results; // Display results for all rounds
 }
