@@ -1,6 +1,10 @@
+var roundsPlayed = 0;
+
 function playGame(playerChoice) {
     var choices = ["rock", "paper", "scissors"];
     var results = ""; // To store the results for all rounds
+
+    roundsPlayed++; // Increment the rounds played
 
     for (var i = 0; i < 3; i++) {
         var computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -23,4 +27,11 @@ function playGame(playerChoice) {
     }
 
     document.getElementById("result").innerHTML = results; // Display all three rounds' results
+    
+    // Disable buttons after three rounds
+    if (roundsPlayed >= 3) {
+        document.getElementById("rockBtn").disabled = true;
+        document.getElementById("paperBtn").disabled = true;
+        document.getElementById("scissorsBtn").disabled = true;
+    }
 }
