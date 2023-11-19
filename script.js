@@ -5,9 +5,9 @@ function playGame(playerChoice) {
     var choices = ["rock", "paper", "scissors"];
     var results = ""; // To store the results for all rounds
 
-    if (roundsPlayed < 3 && !playerChoices.includes(playerChoice)) {
-        playerChoices.push(playerChoice);
+    if (roundsPlayed < 3) {
         roundsPlayed++;
+        playerChoices.push(playerChoice);
 
         for (var i = 0; i < 3; i++) {
             var computerChoice = choices[Math.floor(Math.random() * 3)];
