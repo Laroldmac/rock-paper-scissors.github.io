@@ -1,12 +1,12 @@
 var roundsPlayed = 0;
-var prevChoice = null;
+var playerChoices = [];
 
 function playGame(playerChoice) {
     var choices = ["rock", "paper", "scissors"];
     var results = ""; // To store the results for all rounds
 
-    if (roundsPlayed < 3 && playerChoice !== prevChoice) {
-        prevChoice = playerChoice;
+    if (roundsPlayed < 3 && !playerChoices.includes(playerChoice)) {
+        playerChoices.push(playerChoice);
         roundsPlayed++;
 
         for (var i = 0; i < 3; i++) {
